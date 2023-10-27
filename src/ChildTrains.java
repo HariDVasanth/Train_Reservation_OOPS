@@ -5,79 +5,79 @@ import java.util.Scanner;
 public class ChildTrains extends ParentTrains {
 
     Scanner scanner=new Scanner(System.in);
-    @Override
+
     public void setTrainNumber(int trainNumber) {
         this.trainNumber = trainNumber;
     }
 
-    @Override
+
     public void setTrainName(String trainName) {
         this.trainName = trainName;
     }
 
-    @Override
+
     public void setGeneralSeats(int generalSeats) {
         this.generalSeats = generalSeats;
     }
 
-    @Override
+
     public void setAcSeats(int acSeats) {
         this.acSeats = acSeats;
     }
 
-    @Override
+
     public void setAcFare(int acFare) {
         this.acFare = acFare;
     }
 
-    @Override
+
     public void setGeneralFare(int generalFare) {
         this.generalFare = generalFare;
     }
 
 
 
-    @Override
+
     public void setDeparture(String departure) {
         this.departure = departure;
     }
 
-    @Override
+
     public void setDestination(String destination) {
         this.destination = destination;
     }
 
-    @Override
+
     public void setTrains(int trainNumber, ChildTrains val) {
         trains.put(trainNumber, val);
     }
 
-    @Override
+
     public int getTrainNumber() {
         return trainNumber;
     }
 
-    @Override
+
     public String getTrainName() {
         return trainName;
     }
 
-    @Override
+
     public int getAcSeats() {
         return acSeats;
     }
 
-    @Override
+
     public int getGeneralSeats() {
         return generalSeats;
     }
 
-    @Override
+
     public int getGeneralFare() {
         return generalFare;
     }
 
-    @Override
+
     public int getAcFare() {
         return acFare;
     }
@@ -94,7 +94,7 @@ public class ChildTrains extends ParentTrains {
         return trains;
     }
 
-    @Override
+
     public void displayTrains() {
         for (Map.Entry<Integer, ChildTrains> entry : trains.entrySet()) {
             int key = entry.getKey();
@@ -116,32 +116,32 @@ public class ChildTrains extends ParentTrains {
 
     }
 
-    @Override
+
     public void bookedAcSeats(int booked) {
         acSeats -= booked;
     }
 
-    @Override
+
     public void cancelAcSeats(int cancelled) {
         acSeats += cancelled;
     }
 
-    @Override
+
     public void bookedGeneralSeats(int booked) {
         generalSeats -= booked;
     }
 
-    @Override
+
     public void cancelGeneralSeats(int cancelled) {
         generalSeats += cancelled;
     }
 
-    @Override
+
     public void addTrainDetails(int trainNumber, ChildTrains childTrains) {
         trains.put(trainNumber, childTrains);
     }
 
-    @Override
+
     public void bookTickets(int trainNumber, int seats, int type) {
         if (type == 1) {
             acSeats = getTrains().get(trainNumber).getAcSeats();
@@ -202,7 +202,7 @@ public class ChildTrains extends ParentTrains {
     }
 
 
-    @Override
+
     public void cancelTickets(int pnr) {
         if (passengers.containsKey(pnr)) {
             Ticketbookinfo ticketbookinfo = passengers.get(pnr);

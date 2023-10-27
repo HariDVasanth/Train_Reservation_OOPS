@@ -9,12 +9,12 @@ public class User implements UserLogin {
         setLoginDetails();
     }
 
-    public void setLoginDetails() {
+    private void setLoginDetails() {
         loginDetails.put("Admin", "123");
     }
 
     public boolean login(String username, String password) {
-        if (loginDetails.containsKey(username) && loginDetails.get(username).equals(password)) {
+        if(loginDetails.containsKey(username) && loginDetails.get(username).equals(password)) {
             return true;
         }
         return false;
